@@ -15,6 +15,7 @@ import { isFunction, isHex, u8aToHex, u8aWrapBytes } from '@polkadot/util';
 
 import { useTranslation } from './translate';
 import Unlock from './Unlock';
+import { beaconSigner } from '@polkadot/react-api/util/BeaconSigner';
 
 interface Props {
   className?: string;
@@ -64,13 +65,21 @@ function Sign ({ className = '' }: Props): React.ReactElement<Props> {
 
     // for injected, retrieve the signer
     if (meta.source && isInjected) {
-      web3FromSource(meta.source as string)
-        .catch((): null => null)
-        .then((injected) => setSigner({
-          isUsable: isFunction(injected?.signer?.signRaw),
-          signer: injected?.signer || null
-        }))
-        .catch(console.error);
+      if (meta.source as string) {
+        // This is beacon
+        setSigner({
+          isUsable: true,
+          signer: beaconSigner
+        });
+      } else {
+        web3FromSource(meta.source as string)
+          .catch((): null => null)
+          .then((injected) => setSigner({
+            isUsable: isFunction(injected?.signer?.signRaw),
+            signer: injected?.signer || null
+          }))
+          .catch(console.error);
+      }
     }
   }, [currentPair]);
 

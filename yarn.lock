@@ -21,6 +21,131 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@airgap/beacon-blockchain-kusama@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-blockchain-kusama@npm:2.5.0-beta.0"
+  checksum: d8b0ab3428d02c250a0581273c3aadad63b68a18c9deac5ba3d7756f523b8e39645503e283684fbe7a2c136dc8034219bea62fcf2ff41fd2f0d833311c554d65
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-blockchain-tezos@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-blockchain-tezos@npm:2.5.0-beta.0"
+  checksum: 956563d58fe7c04d6253ae3c544f77b7dc4b7ff2d2ef926fee319febf77f4a4f0bea5dd8effc0bf3e774145fd72e1e05a761875e40b76425d2d00eb58c4fcd54
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-core@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-core@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-types": ^2.5.0-beta.0
+    "@airgap/beacon-utils": ^2.5.0-beta.0
+    "@types/libsodium-wrappers": 0.7.9
+    bs58check: 2.1.2
+    libsodium-wrappers: 0.7.9
+  checksum: c77fa5a7ee34134b88fe67b99078488b5913d8fd689e392f610f891720e60226eb5f301ad06bc16dbe17a630b544511f3898b2662daacc98441c2b7fe8e18727
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-dapp@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-dapp@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-core": ^2.5.0-beta.0
+    "@airgap/beacon-transport-matrix": ^2.5.0-beta.0
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.0
+    "@airgap/beacon-ui": ^2.5.0-beta.0
+    qrcode-generator: 1.4.4
+  checksum: 67eecd4876b5de582e1105fcd666e2078706c2733a2f0753ec458cd5d044d396fa2ef38233d06375c027fe2ae32679e550c04a5a88fb2f97714a984a8fa1a177
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-sdk@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-sdk@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-blockchain-kusama": ^2.5.0-beta.0
+    "@airgap/beacon-blockchain-tezos": ^2.5.0-beta.0
+    "@airgap/beacon-core": ^2.5.0-beta.0
+    "@airgap/beacon-dapp": ^2.5.0-beta.0
+    "@airgap/beacon-transport-matrix": ^2.5.0-beta.0
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.0
+    "@airgap/beacon-types": ^2.5.0-beta.0
+    "@airgap/beacon-ui": ^2.5.0-beta.0
+    "@airgap/beacon-utils": ^2.5.0-beta.0
+    "@airgap/beacon-wallet": ^2.5.0-beta.0
+  checksum: e3e576058f0e9ed4f0d6afe4b7d19eff6c0fb610ab0a8ebb5897def30269da057892adb4e24aa8b4f247c075e11ccf4b603a3b562a45fb7c11e0d99ed83e95ec
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-transport-matrix@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-transport-matrix@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-core": ^2.5.0-beta.0
+    "@airgap/beacon-utils": ^2.5.0-beta.0
+    axios: 0.24.0
+  checksum: 7064efc07814f6f484c7d499f05870a4d5e0cbc5fa68812cd6efaa12c70ed3fde9930726176386c019c12e3f5666438e734cb75558afdaa327ebed1d900593c0
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-transport-postmessage@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-transport-postmessage@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-core": ^2.5.0-beta.0
+    "@airgap/beacon-types": ^2.5.0-beta.0
+    "@airgap/beacon-utils": ^2.5.0-beta.0
+    "@types/libsodium-wrappers": 0.7.9
+    libsodium-wrappers: 0.7.9
+  checksum: 4e32dae0e1e8efa5d66d2db06cab9d888274a2279085fd34418bc8bec14309c6e27fcd08636dc376016b7bd31a2cb6fc1b83d2cad44716d367f5af132049c36e
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-types@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-types@npm:2.5.0-beta.0"
+  dependencies:
+    "@types/chrome": 0.0.163
+  checksum: afe37f647e5894a9b0eced0a9b96300075c18b06242b93b9ec61b10f2afe6705d559526a637b8663a51486b4fc2aaf62cc51f156144585b6991384b53710e69d
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-ui@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-ui@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-core": ^2.5.0-beta.0
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.0
+    "@airgap/beacon-types": ^2.5.0-beta.0
+    "@airgap/beacon-utils": ^2.5.0-beta.0
+  checksum: 7698e0889faaba75d738b22ebc253301adf1a6468720aa15426a07b020492bac4b75391c3bf405df08e0ac5ef146ca1fc12f3fa7d4d69e527cee6c989d860d4a
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-utils@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-utils@npm:2.5.0-beta.0"
+  dependencies:
+    "@types/libsodium-wrappers": 0.7.9
+    bs58check: 2.1.2
+    libsodium-wrappers: 0.7.9
+  checksum: c689e00a90209b59120c2dd3edbf382ada7e5b5ec2e2fd9d068d0425bd6c15cd0c4923f8c36b2a53072935d79aa4ee35c3bbe5528c8cd65123890422a45c30d4
+  languageName: node
+  linkType: hard
+
+"@airgap/beacon-wallet@npm:^2.5.0-beta.0":
+  version: 2.5.0-beta.0
+  resolution: "@airgap/beacon-wallet@npm:2.5.0-beta.0"
+  dependencies:
+    "@airgap/beacon-core": ^2.5.0-beta.0
+    "@airgap/beacon-transport-matrix": ^2.5.0-beta.0
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.0
+  checksum: a61ab16e0da530859596043e1de07b609102dd0fc74e4c60f298eb9ad721069d0d3f9f375f4cd9796883d472dc0ee4230690df02acc94fd9a78ef0dd3c5a2bde
+  languageName: node
+  linkType: hard
+
 "@babel/cli@npm:^7.16.8":
   version: 7.16.8
   resolution: "@babel/cli@npm:7.16.8"
@@ -3205,6 +3330,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@polkadot/react-api@workspace:packages/react-api"
   dependencies:
+    "@airgap/beacon-sdk": ^2.5.0-beta.0
     "@babel/runtime": ^7.16.7
     "@polkadot/api": ^7.6.1
     "@polkadot/extension-compat-metamask": ^0.42.8-1
@@ -4158,6 +4284,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/chrome@npm:0.0.163":
+  version: 0.0.163
+  resolution: "@types/chrome@npm:0.0.163"
+  dependencies:
+    "@types/filesystem": "*"
+    "@types/har-format": "*"
+  checksum: e47d99d7c581a4dc70c30ae5e6e2980666b25bbf098c6eaa9fd3abd6e1686f0acf2e53bf2c8e7bba339c4639df0828d45d10fa9d66f669d9ef2bb1314b6a9500
+  languageName: node
+  linkType: hard
+
 "@types/codeflask@npm:^1.4.3":
   version: 1.4.3
   resolution: "@types/codeflask@npm:1.4.3"
@@ -4279,6 +4415,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/filesystem@npm:*":
+  version: 0.0.32
+  resolution: "@types/filesystem@npm:0.0.32"
+  dependencies:
+    "@types/filewriter": "*"
+  checksum: 4b9079d200a3b241722b90e1c5806c4b32c4dac87d42a1c7ef76a2c0dafdbe7d5f1a379b873ad5de73622b44de6599e1522908f67b938d54e785bd1c36e302a0
+  languageName: node
+  linkType: hard
+
+"@types/filewriter@npm:*":
+  version: 0.0.29
+  resolution: "@types/filewriter@npm:0.0.29"
+  checksum: 0c58aa875c2c245be7dbc42b20212f3203e13d11ec013a4a5cd0febf0e8b87214be5882c05ff9d7bdf0398f145a4fdbc24b7e6cf7b094e134a3b4c7a0598502f
+  languageName: node
+  linkType: hard
+
 "@types/fs-extra@npm:^9.0.11":
   version: 9.0.11
   resolution: "@types/fs-extra@npm:9.0.11"
@@ -4304,6 +4456,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: d13028412fdc7dd16bcb566da730a15e49bdc71d2681adc67b01a9df6c5ab775d1d547298adf0cbe36f227781c1400d0b0f1da3cb1c2d4b3f9bea02e8aac75ec
+  languageName: node
+  linkType: hard
+
+"@types/har-format@npm:*":
+  version: 1.2.8
+  resolution: "@types/har-format@npm:1.2.8"
+  checksum: a14c6f31fb7c39be383638e00b3beaf693acfa6a2d8a10d9333f3d5cb70d3f2fc4d369a781775451012adc52faef08ff476e40a34fc6a1d6a557dd02ad984c0c
   languageName: node
   linkType: hard
 
@@ -4402,6 +4561,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: ee0d098693bf4af44be756eed02daf95f5d0fd4b5b02da952a5952e08842baddf6a986a9ea5f9e460729782f1a0a47848c892ad96ea188b66a363feb49a1536f
+  languageName: node
+  linkType: hard
+
+"@types/libsodium-wrappers@npm:0.7.9":
+  version: 0.7.9
+  resolution: "@types/libsodium-wrappers@npm:0.7.9"
+  checksum: 5ddf61b8047e38f00c1509369ad868a724235a67940971cc671b070ab9d6b2e6872407253be1163b174f742ecbb0986fda7b91aa0b7069437359b4671bfc529b
   languageName: node
   linkType: hard
 
@@ -6043,6 +6209,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:0.24.0":
+  version: 0.24.0
+  resolution: "axios@npm:0.24.0"
+  dependencies:
+    follow-redirects: ^1.14.4
+  checksum: 468cf496c08a6aadfb7e699bebdac02851e3043d4e7d282350804ea8900e30d368daa6e3cd4ab83b8ddb5a3b1e17a5a21ada13fc9cebd27b74828f47a4236316
+  languageName: node
+  linkType: hard
+
 "axios@npm:^0.21.1":
   version: 0.21.1
   resolution: "axios@npm:0.21.1"
@@ -6632,7 +6807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bs58check@npm:<3.0.0, bs58check@npm:^2.1.1, bs58check@npm:^2.1.2":
+"bs58check@npm:2.1.2, bs58check@npm:<3.0.0, bs58check@npm:^2.1.1, bs58check@npm:^2.1.2":
   version: 2.1.2
   resolution: "bs58check@npm:2.1.2"
   dependencies:
@@ -10409,6 +10584,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.14.4":
+  version: 1.14.7
+  resolution: "follow-redirects@npm:1.14.7"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: f6d03e5e30877431065bca0d1b2e3db93949eb799d368a5c07ea8a4b71205f0349a3f8f0191bf13a07c93885522834dca1dc8e527dc99a772c6911fba24edc5f
+  languageName: node
+  linkType: hard
+
 "foreach@npm:^2.0.5, foreach@npm:~2.0.1":
   version: 2.0.5
   resolution: "foreach@npm:2.0.5"
@@ -13778,6 +13963,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"libsodium-wrappers@npm:0.7.9":
+  version: 0.7.9
+  resolution: "libsodium-wrappers@npm:0.7.9"
+  dependencies:
+    libsodium: ^0.7.0
+  checksum: b5b1b9e1b4aa5662e07df244934125f9e3cd2ba7fe0ec45191a5ffc822d22f4d2f6e09e42d91c30c4f48ca0c7f810a176fdf5e32eed6722d7d82a2a719459f56
+  languageName: node
+  linkType: hard
+
+"libsodium@npm:^0.7.0":
+  version: 0.7.9
+  resolution: "libsodium@npm:0.7.9"
+  checksum: 1c922c9972cf97ddb7207ee4f810dd291e0610dd57ea0e47f2343968392546aaa629945a2fb39ae5f19d067f6ed0bb7330f32cc9a680a847a662e9a210ce7bfb
+  languageName: node
+  linkType: hard
+
 "line-reader@npm:^0.2.4":
   version: 0.2.4
   resolution: "line-reader@npm:0.2.4"
@@ -16575,7 +16776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qrcode-generator@npm:^1.4.4":
+"qrcode-generator@npm:1.4.4, qrcode-generator@npm:^1.4.4":
   version: 1.4.4
   resolution: "qrcode-generator@npm:1.4.4"
   checksum: 860cfdd2a7a608d34e92cab99774cc08182e1911432f30ed36d16f8a5cdabd7fdf40239caed91fa2691cfe66c8d95c1340a2fc9cc439eed07a9f2eb328c6f527

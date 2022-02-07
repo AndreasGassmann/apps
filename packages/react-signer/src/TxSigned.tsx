@@ -16,6 +16,7 @@ import styled from 'styled-components';
 
 import { ApiPromise } from '@polkadot/api';
 import { web3FromSource } from '@polkadot/extension-dapp';
+import { beaconSigner } from '@polkadot/react-api/util/BeaconSigner';
 import { Button, ErrorBoundary, Modal, Output, StatusContext, Toggle } from '@polkadot/react-components';
 import { useApi, useLedger, useToggle } from '@polkadot/react-hooks';
 import { keyring } from '@polkadot/ui-keyring';
@@ -158,11 +159,16 @@ async function extractParams (api: ApiPromise, address: string, options: Partial
   } else if (isExternal && !isProxied) {
     return ['qr', address, { ...options, signer: new QrSigner(api.registry, setQrState) }];
   } else if (isInjected) {
-    const injected = await web3FromSource(source as string);
+    if (source === 'beacon') {
+      // This is beacon
+      return ['signing', address, { ...options, signer: beaconSigner }];
+    } else {
+      const injected = await web3FromSource(source as string);
 
-    assert(injected, `Unable to find a signer for ${address}`);
+      assert(injected, `Unable to find a signer for ${address}`);
 
-    return ['signing', address, { ...options, signer: injected.signer }];
+      return ['signing', address, { ...options, signer: injected.signer }];
+    }
   }
 
   assert(addressEq(address, pair.address), `Unable to retrieve keypair for ${address}`);

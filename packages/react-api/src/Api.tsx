@@ -7,6 +7,7 @@ import type { ChainProperties, ChainType } from '@polkadot/types/interfaces';
 import type { KeyringStore } from '@polkadot/ui-keyring/types';
 import type { ApiProps, ApiState } from './types';
 
+import { DAppClient } from '@airgap/beacon-sdk';
 import { Detector } from '@substrate/connect';
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import store from 'store';
@@ -14,7 +15,7 @@ import store from 'store';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { deriveMapCache, setDeriveCache } from '@polkadot/api-derive/util';
 import { ethereumChains, typesBundle, typesChain } from '@polkadot/apps-config';
-import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
+import { web3Enable } from '@polkadot/extension-dapp';
 import { TokenUnit } from '@polkadot/react-components/InputNumber';
 import { StatusContext } from '@polkadot/react-components/Status';
 import { useApiUrl, useEndpoint } from '@polkadot/react-hooks';
@@ -24,6 +25,8 @@ import { settings } from '@polkadot/ui-settings';
 import { formatBalance, isNumber, isTestChain, objectSpread, stringify } from '@polkadot/util';
 import { defaults as addressDefaults } from '@polkadot/util-crypto/address/defaults';
 
+import { client } from './util/BeaconSigner';
+// import { BeaconSigner } from './util/BeaconSigner';
 import ApiContext from './ApiContext';
 import registry from './typeRegistry';
 import { decodeUrlTypes } from './urlTypes';
@@ -82,14 +85,35 @@ async function getInjectedAccounts (injectedPromise: Promise<InjectedExtension[]
   try {
     await injectedPromise;
 
-    const accounts = await web3Accounts();
+    console.log('--- GET_INJECTED_ACCOUNTS');
 
-    return accounts.map(({ address, meta }, whenCreated): InjectedAccountExt => ({
-      address,
-      meta: objectSpread({}, meta, {
-        name: `${meta.name || 'unknown'} (${meta.source === 'polkadot-js' ? 'extension' : meta.source})`,
-        whenCreated
-      })
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const myClient: DAppClient = client as any;
+
+    await myClient.getActiveAccount();
+
+    // keyring.saveAddress(activeAccount.address, { name: 'Beacon 1' });
+
+    // const beacon = new BeaconSigner(client);
+
+    // const accounts = await web3Accounts();
+
+    const accounts = await myClient.getAccounts();
+
+    // We use this temporary address so we can test it with wallets that send back an invalid address.
+    const tempAddress = '16MaRzy6tnR6Z6meZcgw4UiHPYfQFcUzaHgihs7QU4g7jpCV';
+
+    accounts.forEach((account) => {
+      account.address = tempAddress;
+    });
+
+    return accounts.map((account): InjectedAccountExt => ({
+      address: account.address,
+      meta: {
+        name: 'My Beacon Account',
+        source: 'beacon',
+        whenCreated: account.connectedAt
+      }
     }));
   } catch (error) {
     console.error('web3Accounts', error);
@@ -217,6 +241,8 @@ function Api ({ apiUrl, children, isElectron, store }: Props): React.ReactElemen
 
     const signer = new ApiSigner(registry, queuePayload, queueSetTxStatus);
     const types = getDevTypes();
+
+    console.log('--- TEST', registry);
 
     api = new ApiPromise({ provider, registry, signer, types, typesBundle, typesChain });
 
