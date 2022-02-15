@@ -90,7 +90,18 @@ async function getInjectedAccounts (injectedPromise: Promise<InjectedExtension[]
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const myClient: DAppClient = client as any;
 
-    await myClient.getActiveAccount();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    await myClient.getActiveAccount() ?? (await myClient.permissionRequest({
+      blockchainData: {
+        appMetadata: {
+          name: 'PolkadotJS'
+        },
+        networks: [{ genesisHash: '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636' }],
+        scopes: ['transfer']
+      },
+      blockchainIdentifier: 'substrate',
+      type: 'permission_request'
+    } as any));
 
     // keyring.saveAddress(activeAccount.address, { name: 'Beacon 1' });
 
@@ -101,11 +112,11 @@ async function getInjectedAccounts (injectedPromise: Promise<InjectedExtension[]
     const accounts = await myClient.getAccounts();
 
     // We use this temporary address so we can test it with wallets that send back an invalid address.
-    const tempAddress = '16MaRzy6tnR6Z6meZcgw4UiHPYfQFcUzaHgihs7QU4g7jpCV';
+    // const tempAddress = '16MaRzy6tnR6Z6meZcgw4UiHPYfQFcUzaHgihs7QU4g7jpCV';
 
-    accounts.forEach((account) => {
-      account.address = tempAddress;
-    });
+    // accounts.forEach((account) => {
+    //   account.address = tempAddress;
+    // });
 
     return accounts.map((account): InjectedAccountExt => ({
       address: account.address,
