@@ -68,9 +68,6 @@ export class BeaconSigner implements Signer {
 }
 
 export const client = new DAppClient({
-  appUrl: 'https://airgap-it.github.io/beacon-polkadot-example-dapp/',
-  iconUrl:
-    'https://www.walletbeacon.io/wp-content/uploads/2021/03/beacon_logo-300x300.png',
   matrixNodes: ['beacon-node-1.sky.papers.tech'],
   name: 'Polkadot Example'
 });
