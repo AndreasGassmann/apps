@@ -90,7 +90,8 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       info: 'crab',
       text: t('rpc.prod.crab', 'Darwinia Crab', { ns: 'apps-config' }),
       providers: {
-        'Darwinia Network': 'wss://crab-rpc.darwinia.network'
+        'Darwinia Network': 'wss://crab-rpc.darwinia.network',
+        Dwellir: 'wss://darwiniacrab-rpc.dwellir.com'
       }
     },
     {
@@ -284,6 +285,13 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       text: t('rpc.prod.subsocial', 'Subsocial', { ns: 'apps-config' }),
       providers: {
         DappForce: 'wss://rpc.subsocial.network'
+      }
+    },
+    {
+      info: 'swapdex',
+      text: t('rpc.prod.swapdex', 'Swapdex', { ns: 'apps-config' }),
+      providers: {
+        Swapdex: 'wss://ws.swapdex.network'
       }
     },
     {
