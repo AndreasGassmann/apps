@@ -46,15 +46,15 @@ export class BeaconSigner implements Signer {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const signature = await this.client.request({
       blockchainData: {
-        address: activeAccount.address,
-        metadata: {
-          genesisHash: '',
-          runtimeVersion: '',
-          transactionVersion: ''
-        },
         mode: 'return',
-        payload: raw.data,
-        scope: 'sign_raw'
+        payload: {
+          data: raw.data,
+          dataType: raw.type,
+          isMutable: false,
+          type: 'raw'
+        },
+        scope: 'sign_payload_raw',
+        type: 'sign_payload_request'
       },
       blockchainIdentifier: 'substrate',
       type: 'blockchain_request'
