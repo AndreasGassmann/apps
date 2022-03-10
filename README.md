@@ -163,3 +163,11 @@ The accounts are stored in the following directories:
 * Windows: `%APPDATA%\polkadot-apps\polkadot-accounts`
 
 For more details on the desktop app, head over to [Electron package README](https://github.com/polkadot-js/apps/blob/master/packages/apps-electron/README.md).
+
+### QR code fix:
+
+`node_modules/@airgap/beacon-ui/dist/esm/utils/qr.js` line 14 after `const qr = qrcode(typeNumber, errorCorrectionLevel);`
+
+```typescript
+qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8']
+```

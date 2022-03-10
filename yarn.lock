@@ -21,134 +21,134 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@airgap/beacon-blockchain-kusama@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-blockchain-kusama@npm:2.5.0-beta.1"
+"@airgap/beacon-blockchain-kusama@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-blockchain-kusama@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-types": ^2.5.0-beta.1
-    "@airgap/beacon-ui": ^2.5.0-beta.1
-  checksum: a396eb59dbff188fefb4944f3fb722b73360356484bb8aebd7ede40ed3f536b6f1f4fce58a9b104bdac676f5febf0d857a207f841e38492c4fe826ee41250846
+    "@airgap/beacon-types": ^2.5.0-beta.2
+    "@airgap/beacon-ui": ^2.5.0-beta.2
+  checksum: fe7673e367a94a0900689a9e916d2b4705607cce4f05e140db11d364094c6d08c38d44193c42ec938ea49303d21b976467daf29a917d90cadb0f3aeadc8197c8
   languageName: node
   linkType: hard
 
-"@airgap/beacon-blockchain-tezos@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-blockchain-tezos@npm:2.5.0-beta.1"
+"@airgap/beacon-blockchain-tezos@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-blockchain-tezos@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-types": ^2.5.0-beta.1
-    "@airgap/beacon-ui": ^2.5.0-beta.1
-  checksum: d9383b29c19a2e202a63cb7012a72a8e3bf23a15893a37d7d5205edd79599f054de58ee1f282f30d6befece141bd794383a4c220f94145d942c4b9e90865bdfa
+    "@airgap/beacon-types": ^2.5.0-beta.2
+    "@airgap/beacon-ui": ^2.5.0-beta.2
+  checksum: 2004cff6a438de6ff5c75f15b3f26a6f2f817a5140a24625e0317e1de492012015106db3e89ec508c5a0b5a867243012fc192d2e9d8dc45a3c7dae01ea90b95a
   languageName: node
   linkType: hard
 
-"@airgap/beacon-core@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-core@npm:2.5.0-beta.1"
+"@airgap/beacon-core@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-core@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-types": ^2.5.0-beta.1
-    "@airgap/beacon-utils": ^2.5.0-beta.1
+    "@airgap/beacon-types": ^2.5.0-beta.2
+    "@airgap/beacon-utils": ^2.5.0-beta.2
     "@types/libsodium-wrappers": 0.7.9
     bs58check: 2.1.2
     libsodium-wrappers: 0.7.9
-  checksum: 3753af569702541134199db53d34c95fa90711efe3091e786cbe32c9205c775cfdf91c37f437a6631473d33dc64bbeb65397fe1207db97d5faaa700e3e59ad89
+  checksum: d46c40ca62cef308a01f43adeb1027895df98bf15fb8c02b5d46c4cd2d14b0cd8e6083a270cd330c6b6e9bfdf8d83d22febeae169392691821601431b896a8a1
   languageName: node
   linkType: hard
 
-"@airgap/beacon-dapp@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-dapp@npm:2.5.0-beta.1"
+"@airgap/beacon-dapp@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-dapp@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-core": ^2.5.0-beta.1
-    "@airgap/beacon-transport-matrix": ^2.5.0-beta.1
-    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.1
-    "@airgap/beacon-ui": ^2.5.0-beta.1
+    "@airgap/beacon-core": ^2.5.0-beta.2
+    "@airgap/beacon-transport-matrix": ^2.5.0-beta.2
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.2
+    "@airgap/beacon-ui": ^2.5.0-beta.2
     qrcode-generator: 1.4.4
-  checksum: b7e33d712148320a5b3ddfebd0e85c6360b330567d1671d9fcec15509d3bc533b33832d866b2e6d0300691e7f5dc9b7629e2e531d52d8e965e1236d826d92c66
+  checksum: 52fb8358f611315b4925110403132abffe15a958e17ed8965d507632ce421090876c6b68d937fcdc3854bdd90a53c9f1d9362b3afd050b36a9bacc441f0b7e0f
   languageName: node
   linkType: hard
 
-"@airgap/beacon-sdk@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-sdk@npm:2.5.0-beta.1"
+"@airgap/beacon-sdk@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-sdk@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-blockchain-kusama": ^2.5.0-beta.1
-    "@airgap/beacon-blockchain-tezos": ^2.5.0-beta.1
-    "@airgap/beacon-core": ^2.5.0-beta.1
-    "@airgap/beacon-dapp": ^2.5.0-beta.1
-    "@airgap/beacon-transport-matrix": ^2.5.0-beta.1
-    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.1
-    "@airgap/beacon-types": ^2.5.0-beta.1
-    "@airgap/beacon-ui": ^2.5.0-beta.1
-    "@airgap/beacon-utils": ^2.5.0-beta.1
-    "@airgap/beacon-wallet": ^2.5.0-beta.1
-  checksum: 8c90e5a842d890b8583a894e9372d3dee54398c8145f59d582d9d66d5179fb7bfbac2bd943a9c890f793949ea33dbacab28c60bc6c81bf51964a2523ecd8d9d3
+    "@airgap/beacon-blockchain-kusama": ^2.5.0-beta.2
+    "@airgap/beacon-blockchain-tezos": ^2.5.0-beta.2
+    "@airgap/beacon-core": ^2.5.0-beta.2
+    "@airgap/beacon-dapp": ^2.5.0-beta.2
+    "@airgap/beacon-transport-matrix": ^2.5.0-beta.2
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.2
+    "@airgap/beacon-types": ^2.5.0-beta.2
+    "@airgap/beacon-ui": ^2.5.0-beta.2
+    "@airgap/beacon-utils": ^2.5.0-beta.2
+    "@airgap/beacon-wallet": ^2.5.0-beta.2
+  checksum: f701a48964219e0bfd2c87226a8c046973d6490d85dd3f4c9297eb13ed80fd4180bce8c776db4bf80ff4b1a8bec96be78c161e5cb399fc0ec5bd2b879a7e5e4e
   languageName: node
   linkType: hard
 
-"@airgap/beacon-transport-matrix@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-transport-matrix@npm:2.5.0-beta.1"
+"@airgap/beacon-transport-matrix@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-transport-matrix@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-core": ^2.5.0-beta.1
-    "@airgap/beacon-utils": ^2.5.0-beta.1
+    "@airgap/beacon-core": ^2.5.0-beta.2
+    "@airgap/beacon-utils": ^2.5.0-beta.2
     axios: 0.24.0
-  checksum: 55fe67b4250f811a6904752ce177a52a5b9652da5b11a49008b113d5655245f1759d34111d2d4eba24808a2fa88f8d9e2f58023182aabdd161991ca62624f194
+  checksum: e70b69f2f2228359f495632c7cd264cbdaf352233b0e5789f060a56f487dc3ba4463775ce3792b8f3d0057082d179720224bbd84935da9631c342cf115da9226
   languageName: node
   linkType: hard
 
-"@airgap/beacon-transport-postmessage@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-transport-postmessage@npm:2.5.0-beta.1"
+"@airgap/beacon-transport-postmessage@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-transport-postmessage@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-core": ^2.5.0-beta.1
-    "@airgap/beacon-types": ^2.5.0-beta.1
-    "@airgap/beacon-utils": ^2.5.0-beta.1
+    "@airgap/beacon-core": ^2.5.0-beta.2
+    "@airgap/beacon-types": ^2.5.0-beta.2
+    "@airgap/beacon-utils": ^2.5.0-beta.2
     "@types/libsodium-wrappers": 0.7.9
     libsodium-wrappers: 0.7.9
-  checksum: 68dd75e1658dec493f82d7a7bb8cc7d360c5dccaa3efb6ddeaca1daa355ed046db7c4a7a50a7028cd1877450977feeaf5321a7cf2495417c2af6c002b6e91065
+  checksum: 3cdfcb31a2dc7042fa3868612038fdfcb2635095102941fa26bccc625687a50e68cca44854ff5977ee28cf8e901436434117d9c47a367dd1620ba28d79abb387
   languageName: node
   linkType: hard
 
-"@airgap/beacon-types@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-types@npm:2.5.0-beta.1"
+"@airgap/beacon-types@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-types@npm:2.5.0-beta.2"
   dependencies:
     "@types/chrome": 0.0.163
-  checksum: 0f86b8cd743ca8a9d888e00c9c85376ec3802db1cf5deaed076aa7fb86c51f73f72a1795d64801853644cfbcb0a9dbc8ea6af84ee8471a332628cd99c9f1ebad
+  checksum: 364a2b4b836d00bf488ba425520f72b63941600b7e4ac2ce2b78be5ca8dc9c16ed85c5834dd80d051b97d9897f1e523a30f08f2a212892a8eb61829c9333e922
   languageName: node
   linkType: hard
 
-"@airgap/beacon-ui@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-ui@npm:2.5.0-beta.1"
+"@airgap/beacon-ui@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-ui@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-core": ^2.5.0-beta.1
-    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.1
-    "@airgap/beacon-types": ^2.5.0-beta.1
-    "@airgap/beacon-utils": ^2.5.0-beta.1
-  checksum: 7c6070ba12cf2e08d604a5f1b4bd3d9fd913aedece23355f19a10dcc8a2b8022ce97cd3d6456dcb8e9acba4c950c670ce497d690da23c823fc8641db408cca22
+    "@airgap/beacon-core": ^2.5.0-beta.2
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.2
+    "@airgap/beacon-types": ^2.5.0-beta.2
+    "@airgap/beacon-utils": ^2.5.0-beta.2
+  checksum: 91c0468a98bbb8ef47a7701c8b613a3eeb1a5b533bc6f2ef4fd2ec43f801a866d4242881b6aca1604cc31201fe659312bc998960b55761bf94ed5826d1819ab2
   languageName: node
   linkType: hard
 
-"@airgap/beacon-utils@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-utils@npm:2.5.0-beta.1"
+"@airgap/beacon-utils@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-utils@npm:2.5.0-beta.2"
   dependencies:
     "@types/libsodium-wrappers": 0.7.9
     bs58check: 2.1.2
     libsodium-wrappers: 0.7.9
-  checksum: 11a3f3a62b65221e868fa75952640a3e3400088eb5243243ac18c7f5100b98f20c948c4225e155ab09a42222a363599b702fb05abe95a1f675ac1a555086d666
+  checksum: 8012d18463c133ccdb74ab42eea91e11fe7718a3ec4b10c41402ddff5b203f31775b08b199470f7f6caa2773553a4e2f1531d5f0a4333d4880d86389c40c3246
   languageName: node
   linkType: hard
 
-"@airgap/beacon-wallet@npm:^2.5.0-beta.1":
-  version: 2.5.0-beta.1
-  resolution: "@airgap/beacon-wallet@npm:2.5.0-beta.1"
+"@airgap/beacon-wallet@npm:^2.5.0-beta.2":
+  version: 2.5.0-beta.2
+  resolution: "@airgap/beacon-wallet@npm:2.5.0-beta.2"
   dependencies:
-    "@airgap/beacon-core": ^2.5.0-beta.1
-    "@airgap/beacon-transport-matrix": ^2.5.0-beta.1
-    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.1
-  checksum: e611ea62e8f826f7786887eb8298dfbebf23020c29de4d2087c63e518d8b6328bf51426062ce978c571c3d717121ca13a60f5c13c63ba3b731b0f31a1c21aff7
+    "@airgap/beacon-core": ^2.5.0-beta.2
+    "@airgap/beacon-transport-matrix": ^2.5.0-beta.2
+    "@airgap/beacon-transport-postmessage": ^2.5.0-beta.2
+  checksum: 605a250cbac90a1f3d411ecb8b893909e63dbccc8e0f9a7e0e2507da5f7873c0f39c5db2491b8ba8411c8ffe487752d02202be13dcd79f3e68e6d7c2987e6a5c
   languageName: node
   linkType: hard
 
@@ -3371,7 +3371,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@polkadot/react-api@workspace:packages/react-api"
   dependencies:
-    "@airgap/beacon-sdk": ^2.5.0-beta.1
+    "@airgap/beacon-sdk": ^2.5.0-beta.2
     "@babel/runtime": ^7.17.2
     "@polkadot/api": ^7.8.1
     "@polkadot/extension-compat-metamask": ^0.42.8-3
