@@ -44,7 +44,7 @@ export class BeaconSigner implements Signer {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    const signature = await this.client.request({
+    const response = await this.client.request({
       accountId: activeAccount.accountIdentifier,
       blockchainData: {
         mode: 'return',
@@ -61,9 +61,11 @@ export class BeaconSigner implements Signer {
       type: 'blockchain_request'
     } as any);
 
+    console.log('RESPONSE', response);
+
     return {
       id: 0,
-      signature: (signature.blockchainData as any).signature
+      signature: (response.blockchainData as any).signature
     };
   }
 }
