@@ -97,7 +97,7 @@ async function getInjectedAccounts (injectedPromise: Promise<InjectedExtension[]
         appMetadata: {
           name: 'PolkadotJS'
         },
-        networks: [{ genesisHash: '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636' }],
+        networks: [{ genesisHash: '91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3' }],
         scopes: ['transfer']
       },
       blockchainIdentifier: 'substrate',
