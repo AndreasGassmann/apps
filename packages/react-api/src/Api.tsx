@@ -8,7 +8,7 @@ import type { ChainProperties, ChainType } from '@polkadot/types/interfaces';
 import type { KeyringStore } from '@polkadot/ui-keyring/types';
 import type { ApiProps, ApiState } from './types';
 
-import { DAppClient } from '@airgap/beacon-sdk';
+import { BeaconMessageType, DAppClient } from '@airgap/beacon-sdk';
 import { ScProvider } from '@substrate/connect';
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import store from 'store';
@@ -95,13 +95,14 @@ async function getInjectedAccounts (injectedPromise: Promise<InjectedExtension[]
     await myClient.getActiveAccount() ?? (await myClient.permissionRequest({
       blockchainData: {
         appMetadata: {
-          name: 'PolkadotJS'
+          name: 'PolkadotJS',
+          senderId: 'test123'
         },
         networks: [{ genesisHash: '91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3' }],
         scopes: ['transfer']
       },
       blockchainIdentifier: 'substrate',
-      type: 'permission_request'
+      type: BeaconMessageType.PermissionRequest
     } as any));
 
     // keyring.saveAddress(activeAccount.address, { name: 'Beacon 1' });

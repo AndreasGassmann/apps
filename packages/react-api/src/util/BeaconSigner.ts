@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { DAppClient, SubstrateBlockchain } from '@airgap/beacon-sdk';
+import { BeaconMessageType, DAppClient, SubstrateBlockchain } from '@airgap/beacon-sdk';
 
 import { Signer } from '@polkadot/api/types';
 import { SignerPayloadRaw, SignerResult } from '@polkadot/types/types/extrinsic';
@@ -58,8 +58,8 @@ export class BeaconSigner implements Signer {
         type: 'sign_payload_request'
       },
       blockchainIdentifier: 'substrate',
-      type: 'blockchain_request'
-    } as any);
+      type: BeaconMessageType.BlockchainRequest
+    } as any /* SubstrateSignPayloadRequest */);
 
     console.log('RESPONSE', response);
 
